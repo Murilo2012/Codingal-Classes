@@ -18,11 +18,11 @@ else:
     print("You need to practice")
 
 
- homework=input("Is homework done? (yes/no): ")
-money=input("Do you have money? (yes/no): ")   
-parents=input("Did parents allow? (yes/no): ")
+#  homework=input("Is homework done? (yes/no): ")
+# money=input("Do you have money? (yes/no): ")   
+# parents=input("Did parents allow? (yes/no): ")
 
-If homework=="yes" and money=="yes" and parents=="yes":
-    print("You can go out and play")
-else:
-    print("You need to stay home") 
+# If homework=="yes" and money=="yes" and parents=="yes":
+#     print("You can go out and play")
+# else:
+#     print("You need to stay home") 
