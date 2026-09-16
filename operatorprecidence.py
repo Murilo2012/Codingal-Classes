@@ -23,6 +23,16 @@ if name=="Elix" or name=="John" and age>=2:
     print("You are allowed to enter")
 else:
     print("Goodbye")    
-# name= ok,  age= false
+# name= true ,  age= false
+# + and -  = + ( You are allowed to enter)
+
+
+
+if name=="Murilo" and age>=10 or name=="Elix" and age>=0:
+    print("You are allowed to enter")
+else:
+    print("Goodbye")    
+# Murilo=True, Age=False, Elix=True, Age=True    
+# + and - and + and + = +( true) ( You are allowed to enter)
 
 
