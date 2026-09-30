@@ -79,7 +79,8 @@ else:
     print("Student 3 has the lowest score")
 #answer=student 1 has the lowest score 
 
-
+input(input("Press enter to exit"))
+num=int(input("Enter a number: "))
 
 
         
