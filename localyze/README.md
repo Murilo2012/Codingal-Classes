@@ -1,31 +1,40 @@
-# Localyze — site
+# Localyze · site
 
-Site estático (HTML + CSS + JS, sem build) de foto e vídeo, Canoas e região.
+Site de foto e vídeo (Canoas e região). Só HTML, CSS e JavaScript: não precisa de build nem de servidor.
 
 ## Publicar no Cloudflare Pages (grátis)
 
-1. Crie uma conta em https://dash.cloudflare.com e abra **Workers & Pages → Create → Pages → Connect to Git**.
-2. Escolha este repositório (`Codingal-Classes`) e a branch que contém a pasta `localyze`.
-3. Configurações do projeto:
-   - **Project name:** o nome que vira o endereço (`nome.pages.dev`)
+1. Crie uma conta em https://dash.cloudflare.com
+2. Vá em **Workers & Pages → Create → Pages → Connect to Git** e escolha este repositório.
+3. Configure:
+   - **Project name:** vira o endereço (`nome.pages.dev`)
+   - **Production branch:** a branch que tem a pasta `localyze`
    - **Build command:** deixe vazio
    - **Build output directory:** `localyze`
-4. Salve e aguarde. O site abre em `https://nome.pages.dev`.
+4. Salve. Em um ou dois minutos o site abre em `https://nome.pages.dev`.
 
-Depois de saber o endereço final, troque `https://localyze.pages.dev/img/og.jpg` no `index.html`
-(tag `og:image`) pelo endereço real, para a prévia do link aparecer certa no WhatsApp.
+Depois de saber o endereço final, troque `localyze.pages.dev` no `index.html` (procure por ele,
+aparece 2 vezes) pelo endereço real. Isso faz a prévia do link aparecer certa no WhatsApp.
 
 ## Onde mudar as coisas
 
 | O quê | Onde |
 |---|---|
-| Textos, telefone, e-mail, Instagram | `index.html` |
-| Cores (azul claro, claro/escuro) | `style.css`, bloco `:root` no começo |
-| Fotos | pasta `img/` (use `.webp`) |
-| Seção "Trabalhos" (desligada) | `index.html`, `<section id="trabalhos" hidden>`: apague `hidden` e adicione as fotos |
+| Textos, serviços, perguntas | `index.html` |
+| Telefone do WhatsApp | `index.html` (links `wa.me/5551989006644`) e `script.js` (linha `var ZAP`) |
+| Cores | `style.css`, bloco `:root` no começo (`--azul` é o azul claro) |
+| Fotos | pasta `img/` (formato `.webp`) |
+| Seção "Trabalhos" (desligada) | `index.html`, `<section id="trabalhos" hidden>`: apague `hidden` e coloque as fotos |
+| Imagem da prévia do link | `img/og.jpg` (1200 × 630) |
 
-WhatsApp: o link `wa.me/5551989006644` já abre com a mensagem pronta
-("Olá, Andrade! Vi a apresentação da Localyze e quero um orçamento.").
+## O que o site faz
+
+- Tema claro (azul) e escuro, com botão para trocar; a escolha fica salva no aparelho.
+- Todos os botões de WhatsApp já abrem com mensagem pronta; cada serviço tem a sua.
+- Formulário "Monte sua mensagem": junta nome, tipo de negócio e o que a pessoa precisa
+  e abre o WhatsApp com tudo escrito. Não guarda nenhum dado.
+- No celular, aparece um botão fixo de WhatsApp depois da abertura.
+- Página `404.html` para links quebrados e `_headers` com cache das fontes e imagens.
 
 ## Fontes
-Barlow e Barlow Condensed (licença SIL OFL), hospedadas na própria pasta `fonts/`.
+Barlow e Barlow Condensed (licença SIL OFL), hospedadas na pasta `fonts/`.
